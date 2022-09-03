@@ -26,13 +26,13 @@ driver.get(url)
 print("访问页面成功")
 
 username = driver.find_element(by='id', value='employeeNumber')
-StudentID = '9002370'
+StudentID = '0138661'
 username.send_keys(StudentID)
 
 print("填入员工号成功")
 
 secretKey = driver.find_element(by='id', value='numId')
-KeyNum = '041815'
+KeyNum = '252054'
 secretKey.send_keys(KeyNum)
 
 print("填入身份证成功")
@@ -59,7 +59,7 @@ print("进入体温填报页面成功")
 time.sleep(2)
 
 secretKey = driver.find_element(by='id', value='morning')
-KeyNum = '36.7'
+KeyNum = '36.3'
 secretKey.send_keys(KeyNum)
 
 print("填入上午体温成功")
