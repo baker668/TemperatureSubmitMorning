@@ -37,6 +37,10 @@ jobs:
         run: pip install -r ./Spider/requirements.txt
       - name: 'Working'
         run: |
+          sudo apt-get remove google-chrome-stable
+          sudo rm -rf ~/.config/google-chrome
+          wget https://github.com/baker668/FileUpload/releases/download/AddFile/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i ./google-chrome-stable_current_amd64.deb
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
           sudo rm -f /etc/localtime
